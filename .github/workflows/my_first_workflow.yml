@@ -5,11 +5,13 @@ on: workflow_dispatch
 jobs:
   my-amazing-job:
     runs-on: ubuntu-latest
+    env: 
+      RUNNER_OS: ${{ runner.os }}      
     steps:
       - run: echo "The amazing job has started"
       - run: echo "This was triggered by a ${{ github.event_name }} event."
       - run: echo "Runner OS ${{ runner.os }}"
+      - run: echo "Runner OS is $RUNNER_OS"
       - run: echo "Repository ${{ github.repository }}"
       - run: echo "Branch Name ${{ github.ref }}"
       - run: echo "The amazing job is complete"
-      - run: echo "The operating system on the runner is $env:RUNNER_OS."
