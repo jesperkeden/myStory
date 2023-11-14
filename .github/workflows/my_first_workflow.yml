@@ -24,4 +24,4 @@ jobs:
           ls -lah ${{ github.workspace }};
           echo "Contents of kapitel_1.txt";
           cat kapitel_1.txt
-      - run: echo "This job's status is ${{ job.status }}
+      - run: echo "This job's status is ${{ job.status }}"
